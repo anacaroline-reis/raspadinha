@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="shortcut icon" href="./imagens/trevo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <title>Raspadinha da Sorte</title>
+</head>
+
+
+<body>
+    <div class="container">
+
+        <div id="bem-vindo" class="bem-vindos">
+
+            <h1 class="animado pular brilhar aparecer">Raspadinha da <br>Sorte 
+                <img src="./imagens/trevo.png" alt="trevo 4 folhas" width="15%" height="15%"></h1>
+            <br><br>
+            <h3>Para participar, registre-se abaixo:</h3>
+            <form id="form-bemvindo">
+                <label for="primeiro-nome">Insira seu nome:</label>
+                <br><img src="./imagens/seta-baixo.gif" alt="seta" width="60" height="60">
+                <input type="text" id="primeiro-nome" placeholder="Insira seu nome" required>
+                <label for="dnsc">Data de Nascimento 👶:</label>
+                <br>
+                <input type="date" id="dnsc" required>
+                <br>
+                <button type="submit" id="botao-enviar">Quero GANHAR agora!!</button>
+            </form>
+        </div>
+            
+            <img src="./imagens/seta-baixo.gif" alt="" srcset="">    <br><br>
+
+            <button id="botao-raspar" class="escondido">Embaralhar</button>
+
+                <p id="resultado"></p>
+        
+
+
+        <div id="raspadinha" class="escondido">
+            <h1>Encontre 03 figuras iguais para levar seu prêmio.</h1>
+
+            <div class="card-raspadinha">
+                
+                <div class="campos-para-raspar" data-icon="dinheiro">
+                    <img src="./imagens/money.png" alt="Ícone de dinheiro" width="40" height="40">
+                    <canvas class="cobertura"></canvas>
+                </div>
+
+                <div class="campos-para-raspar" data-icon="saco-dinheiro">
+                    <img src="./imagens/money-bag.png" alt="saco-dinheiro" width="40" height="40">
+                    <canvas class="cobertura"></canvas>
+                </div>
+
+                <div class="campos-para-raspar" data-icon="trevo">           
+                    <img src="./imagens/trevo.png" alt="trevo 4 folhas" width="40" height="40">
+                    <canvas class="cobertura"></canvas>
+                </div>
+
+                <div class="campos-para-raspar" data-icon="estrela">                
+                    <img src="./imagens/estrela.png" alt="star" width="40" height="40">
+                    <canvas class="cobertura"></canvas>
+                </div>
+
+                <div class="campos-para-raspar" data-icon="moeda">            
+                    <img src="./imagens/moeda.png" alt="moeda" width="50" height="50">
+                    <canvas class="cobertura"></canvas>
+                </div>
+
+                <div class="campos-para-raspar" data-icon="stpatrick">                  
+                    <img src="./imagens/stpatrick.png" alt="sant patrick" width="50" height="50">
+                    <canvas class="cobertura"></canvas>
+                </div>
+
+                <div class="campos-para-raspar" data-icon="ficha-de-cassino">
+                    <img src="./imagens/ficha-de-cassino.png" alt="cassino" width="50" height="50">
+                    <canvas class="cobertura"></canvas>
+                </div>
+
+                <div class="campos-para-raspar" data-icon="cassino">                
+                    <img src="./imagens/cassino.png" alt="cassino7" width="40" height="40">
+                    <canvas class="cobertura"></canvas>
+                </div>
+
+                <div class="campos-para-raspar" data-icon="carro">                
+                    <img src="./imagens/carro.png" alt="carro" width="40" height="40">
+                    <canvas class="cobertura"></canvas>
+                </div>
+
+                <div class="campos-para-raspar" data-icon="sete">
+                    <img src="./imagens/sete.png" alt="sete" width="40" height="40">
+                    <canvas class="cobertura"></canvas>
+                </div>
+
+                <div class="campos-para-raspar" data-icon="bolsa-de-dinheiro">               
+                    <img src="./imagens/bolsa-de-dinheiro.png" alt="bolsa-de-dinheiro" width="40" height="40">
+                    <canvas class="cobertura"></canvas>
+                </div>
+
+                <div class="campos-para-raspar" data-icon="loteria">               
+                    <img src="./imagens/loteria.png" alt="loteria" width="40" height="40">
+                    <canvas class="cobertura"></canvas> 
+                </div>
+            </div>
+
+            <p id="resultado"></p>
+        </div>
+
+        <div id="solicitar-premio" class="hidden">
+            <h1><br>Escolha já seu prêmio 
+                <img src="./imagens/dinheiro-na-mao.gif" alt="dinheiro na mao" width="60" height="60">
+            </h1>
+
+            
+                <form id="escolha-do-premio">
+                    <label for="premio"> </label>
+                    <br>
+                    <img src="./imagens/seta-baixo.gif" alt="seta" width="60" height="60">
+                    <select id="premio">
+                    <!-- Opções de prêmios serão adicionadas dinamicamente com JS-->
+                    </select>
+                </form>
+            
+
+            <form id="solicitacao">
+                
+                <label for="endereco">
+                <br>Endereço para o envio do prêmio 🚛: </label>
+                <input type="text" placeholder="Preencha aqui seu endereço" id="endereco" required>
+                <br>
+                <label for="telefone">Telefone ☎️:</label>
+                <input type="tel" id="telefone">
+                <br><br>
+                <button type="submit">Recolher prêmio</button>
+            </form>
+        </div>
+
+        <div id="redes-sociais">
+            <h3>Acompanhe-nos nas redes sociais:</h3>
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+
+        <div id="mensagem-agradecimento" class="escondido">
+        </div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
